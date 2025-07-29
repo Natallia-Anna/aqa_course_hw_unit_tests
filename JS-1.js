@@ -28,8 +28,8 @@ console.log("—— item_7 == " + item_7 + ", item_7_type == " + item_7_type + "
 
 let n = 5; // можно заменить на любое число от 1 до 9
 
-let nn = n.toString() + n.toString();
-let nnn = n.toString() + n.toString() + n.toString();
+let nn = n.toString() + n;
+let nnn = n.toString() + n + n;
 
 let result = parseInt(n) + parseInt(nn) + parseInt(nnn);
 
