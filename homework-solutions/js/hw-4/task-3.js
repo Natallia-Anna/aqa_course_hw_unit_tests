@@ -26,7 +26,7 @@ for (let input of testAges) {
     console.log("Incorrect data type");
   } else if (input < minAge && input > 0) {
     console.log("You don't have access cause your age is " + input + ". It's less than " + minAge);
-  } else if (input >= minAge && input <= maxAge) {
+  } else if (input >= minAge && input < maxAge) {
     console.log("Welcome!");
   } else if (input > maxAge) {
     console.log("Keep calm and look Culture channel");
