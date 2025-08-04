@@ -8,7 +8,7 @@
 let salary = 1000;
 
 // Создаем переменную grade на основе условия
-let grade = salary >= 1000 ? "middle" : "junior";
+const grade = salary >= 1000 ? "middle" : "junior";
 
 // Выводим результат в консоль
 console.log("Зарплата:", salary);
