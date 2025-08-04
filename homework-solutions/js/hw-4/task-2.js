@@ -26,8 +26,9 @@ for (let age of testAges) {
 
   if (typeof age !== "number") {
     console.log("Incorrect data type");
-  } else if (age < minAge && age > 0) {
-    console.log("You don't have access cause your age is " + age + " It's less then " + minAge);
+  } else {
+     if (age < minAge && age > 0) {
+         console.log("You don't have access cause your age is " + age + " It's less then " + minAge);
   } else if (age >= minAge && age < maxAge) {
     console.log("Welcome!");
   } else if (age > maxAge) {
