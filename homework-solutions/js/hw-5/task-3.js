@@ -7,4 +7,12 @@ const word = 'hello';
 
 let vowelsAndConsonantsResult = '';
 
+const vowelsRegex = /[aeiou]/gi;
+const consonantsRegex = /[bcdfghjklmnpqrstvwxyz]/gi;
+
+const vowels = word.match(vowelsRegex) || [];
+const consonants = word.match(consonantsRegex) || [];
+
+vowelsAndConsonantsResult += `${word} contains ${vowels.length} vowels and ${consonants.length} consonants`;
+
 export { vowelsAndConsonantsResult };

@@ -14,3 +14,17 @@
   5. Проверить задание со следующими значениями в переменной age: 10, 17, 18, 19, 59, 60, 61
 
   */
+const minAge = 18;
+const maxAge = 60;
+
+const age = [10, 17, 18, 19, 59, 60, 61, "30"];
+
+for (const ageses of age) {
+  if (typeof ageses != 'number') {
+    console.log(`Incorrect data type, curent type:${typeof ageses}`);
+  } else if (ageses < minAge) {
+    console.log(`[${ageses}] You don't have access cause your age is ${ageses} It's less then`);
+  } else if (ageses >= minAge && ageses <= maxAge) {
+    console.log(`[${ageses}] Welcome  !`);
+  } else console.log(`[${ageses}] Technical work`);
+}
