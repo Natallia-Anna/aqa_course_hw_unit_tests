@@ -9,7 +9,20 @@
 */
 
 function digitalRoot(number) {
-  // Ваш код
+  let sum = 0;
+  if (typeof number !== 'number') {
+    return 'Invalid data';
+  }
+
+  if (number <= 9 && number >= 0) {
+    return number;
+  } else {
+    let numbers = number.toString().split('');
+    for (let i of numbers) {
+      sum += parseInt(i);
+    }
+  }
+  return digitalRoot(sum);
 }
 
 export { digitalRoot };
