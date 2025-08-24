@@ -51,3 +51,23 @@
 25. Вывести в консоль тип данных item_7 в виде ——  “item_7 == ”  item_7,  “item_7_type == ”  item_7_type ——  
 
 */
+const item_1 = 5;
+const item_2 = 3;
+const item_3 = item_1 + item_2;
+const item_4 = 'Hello World';
+const item_5 = item_3;
+let item_6;
+item_6 = 5;
+let item_6_type;
+item_6_type = item_6;
+let item_7 = String(item_6);
+let item_7_type = item_7;
+
+console.log(item_1);
+console.log(item_2);
+console.log(item_3);
+console.log(item_4);
+console.log(item_3 + item_4);
+console.log(item_3 * item_4);
+console.log('item_6 == ' + item_6 + '; item_6_type == ' + typeof item_6_type);
+console.log('item_7 == ' + item_7 + '; item_7_type == ' + typeof item_7_type);
