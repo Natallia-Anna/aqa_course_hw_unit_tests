@@ -12,15 +12,49 @@
   7. some - проверьте, есть ли в массиве элементы больше 90 //true
   8. every - проверьте, что все элементы массива двухзначные //false
 */
+// const numbers = [7, 8, 2, 30, 85, 95, 77, 94, 37, 31];
+
+// let forEach;
+// let map;
+// let filter;
+// let find;
+// let sort;
+// let reduce;
+// let some;
+// let every;
+
+// export { forEach, map, filter, find, sort, reduce, some, every };
+
 const numbers = [7, 8, 2, 30, 85, 95, 77, 94, 37, 31];
 
-let forEach;
-let map;
-let filter;
-let find;
-let sort;
-let reduce;
-let some;
-let every;
+// 1. forEach - числа, делящиеся на 3
+let forEach = [];
+numbers.forEach(num => {
+  if (num % 3 === 0) {
+    forEach.push(num);
+  }
+});
+
+// 2. map - вычесть длину массива из каждого элемента
+let map = numbers.map(num => num - numbers.length);
+
+// 3. filter - значения, которые больше предыдущего
+let filter = numbers.filter((num, index, arr) => index === 0 ? false : num > arr[index - 1]);
+
+// 4. find - элемент, равный своему индексу
+let find = numbers.find((num, index) => num === index);
+
+// 5. sort - отсортированный массив, не изменяя оригинал
+let sort = [...numbers].sort((a, b) => a - b);
+
+// 6. reduce - сумма всех чисел массива
+let reduce = numbers.reduce((acc, num) => acc + num, 0);
+
+// 7. some - есть ли элементы больше 90
+let some = numbers.some(num => num > 90);
+
+// 8. every - все ли элементы двухзначные
+let every = numbers.every(num => num >= 10 && num <= 99);
 
 export { forEach, map, filter, find, sort, reduce, some, every };
+
