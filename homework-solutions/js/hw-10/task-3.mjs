@@ -20,7 +20,31 @@ function getRandomArbitrary(min, max) {
 }
 
 function uniqueRandomGenerator(n) {
-  // Ваш код
+  const used = new Set(); // хранит уже выданные числа
+
+  return function() {
+    if (used.size === n) {
+      return 'All numbers were received';
+    }
+
+    let num;
+    do {
+      num = Math.floor(getRandomArbitrary(1, n + 1)); // округляем в пределах [1, n]
+    } while (used.has(num));
+
+    used.add(num);
+    return num;
+  };
 }
+const getNext = uniqueRandomGenerator(5);
+
+console.log(getNext());
+console.log(getNext());
+console.log(getNext());
+console.log(getNext());
+console.log(getNext());
+console.log(getNext());
+console.log(getNext());
+console.log(getNext());
 
 export { uniqueRandomGenerator };

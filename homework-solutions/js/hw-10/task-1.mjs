@@ -5,7 +5,14 @@
     Значения в строке должны ссылаться на контекст ЭТОГО ОБЪЕКТА, без подмен.
 */
 
-let qa;
+let qa = {
+  name: 'Vasya',
+  age: 45,
+  salary: 330,
+  getInfo(greetingsWord) {
+    return `${greetingsWord}, my name is ${this.name}, I'm ${this.age} and my salary is ${this.salary}`;
+  },
+};
 
 /*
  2. Changing the context
@@ -15,16 +22,20 @@ let qa;
   - Вызовите метод getInfo объекта qa c контекстом вызова объекта anotherQa с помощью метода apply()
  */
 
-let anotherQa;
+let anotherQa = {
+  name: 'Galya',
+  age: 35,
+  salary: 100500,
+};
 
 // Используйте bind с greetingWord "Hello"
-let bindResult;
+let bindResult = qa.getInfo.bind(anotherQa)('Hello');
 
 // Используйте call с greetingWord "Hi"
-let callResult;
+let callResult = qa.getInfo.call(anotherQa, 'Hi');
 
 // Используйте apply с greetingWord "Hey"
-let applyResult;
+let applyResult = qa.getInfo.apply(anotherQa, ['Hey']);
 
 /*
  3. Closures
@@ -38,7 +49,12 @@ let applyResult;
 */
 
 function createCounter() {
-  // Ваш код
+  let count = 0;
+  return () => {
+    count++;
+    console.log(`Function was called ${count} times`);
+    return count;
+  };
 }
 
 const functionCallCounter = createCounter();
