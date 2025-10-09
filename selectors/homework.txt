@@ -1,0 +1,32 @@
+Task 2. 
+
+1. Xpath/CSS: элемент с id - ‘submit’
+CSS: #submit
+Xpath: //*[@id="submit"]
+
+2. Xpath/CSS: все элементы с классом ‘txt’ 
+CSS: .txt
+Xpath: //*[@class="txt"]
+
+3. Xpath: первый элемент с классом ‘txt’
+(//*[@class="txt"])[1]
+
+4. Xpath: кнопку которая содержит текст: ‘Remove comment’
+//button[text()="Remove comment"]
+
+5. Xpath: первый элемент с классом ‘one’ 
+(//*[@class="one"])[1]
+
+6. Xpath/CSS: элемент с атрибутом ‘multitag2’ и значением  ‘on’ 
+CSS: [multitag2="on"]
+Xpath: //*[@multitag2="on"]
+
+7. Xpath/CSS: всех детей элемента ‘div’ с классом ‘content’
+CSS: div .content *
+Xpath: //div[@class="content"]//*
+
+8. CSS: все элементы ‘span’ и  ‘button’ с классом ‘content’ 
+span .content , button .content
+
+9. Xpath: используя за основу селектор //*[@id='submit'] найти элемент body 
+//*[@id='submit']/ancestor::body
